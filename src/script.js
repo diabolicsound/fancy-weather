@@ -45,6 +45,7 @@ if (!localStorage.getItem('lang')) {
   localStorage.setItem('lang', 'en');
 }
 
+LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
 
 async function weatherCondition() {
   SPEAKER.lang = 'en';
