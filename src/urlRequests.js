@@ -16,7 +16,7 @@ async function textTranslate(text, lang1, lang2) {
 
 async function getUserLocation() {
   try {
-    const url = 'https://ipinfo.io/json?token=5b45614292a351';
+    const url = 'https://ipinfo.io/json?token=39802815dc37c0';
     const result = await fetch(url);
     const data = await result.json();
     return data;
