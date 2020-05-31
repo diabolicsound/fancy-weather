@@ -1,0 +1,298 @@
+body {
+    color: wheat;
+    font-family: 'Muli', sans-serif;
+    /*background-color: rgba( 1, 0, 0, 0.4);*/
+}
+
+
+.control-panel {
+    display: inline-block;
+}
+
+.container-fluid {
+    background-color: rgba( 1, 0, 0, 0.6);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3vh;
+    padding-top: 3vh;
+}
+
+.left-page-part {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-control {
+    display: inline-block;
+    width: 20vw;
+    background-color: rgba( 1, 0, 0, 0.6);
+    color: white;
+    margin-right: 10px;
+}
+
+#search-button {
+    margin-right: 10px;
+}
+
+.wrapper {
+    background-repeat: no-repeat center center;
+    background-image: url('../materials/wallpapers/wallpaper2.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form {
+    display: flex;
+}
+
+.city-name {
+    font-size: 60px;
+    line-height: 58px;
+    width: 85%;
+}
+
+.next-days-forecast {
+    font-size: 26px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+#three-day-forecast {
+    display: flex;
+}
+
+#current-weather-picture {
+    width: 210px;
+}
+
+#checkbox {
+    display: none;
+}
+
+#map { 
+    width: 30vw;
+    height: 70vh;
+    border-radius: 15px;
+}
+
+#date, #month {
+    font-size: 28px;
+    display: inline-block;
+}
+
+.container {
+    display: grid;
+    grid-template-areas:
+        "first sec"
+        "first fourth";
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: -35px;
+}
+
+.overcast {
+    grid-area: fourth;
+   /* background-color: rgba( 1, 0, 0, 0.4);*/
+}
+
+.temperature {
+    font-size: 250px;
+    grid-area: first;
+}
+
+#extra-weather-params, #feels-like, #wind, #humidity, #overcast, #longtitute, #langtitute {
+    font-size: 26px;
+    margin-bottom: 4px;
+}
+
+.block {
+   margin-right: 66px;
+}
+
+.overcast-pic {
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 75px;
+    width: 100px;
+}
+
+.overcast-name {
+    font-size: 32px;
+}
+
+.overcast-day {
+    font-size: 40px;
+}
+
+.micro-icon-block {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-left: 20vw;
+    background-image: url('/materials/icons/micro.png');
+    border-radius: 10%;
+    background-color: white;
+    margin-top: 40px;
+}
+
+#speaker {
+    background-color: white;
+    height: 39px;
+    width: 30px;
+    border-radius: 10%;
+}
+
+.micro-icon-block:hover {
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 10%;
+    transition: 0.5s all ease;
+}
+
+#speaker {
+    cursor: pointer;
+     border-radius: 10%;
+     transition: 0.5s all ease;
+}
+
+#speaker:hover {
+        cursor: pointer;
+        background-color: tomato;
+        border-radius: 10%;
+        transition: 0.5s all ease;
+}
+      .btn {
+        height: 40px;
+        transition: 1s all ease;
+      }
+#right-side, #current-weather {
+    transition: 1s all ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.search-form {
+    margin-right: 5vw;
+}
+
+.mapboxgl-control-container {
+    display: none;
+}
+
+@media (max-width: 980px)  {
+    #map {
+        width: 60vw;
+        height: 20vh;
+    }
+    .main {
+        flex-direction: column;
+    }
+    #right-side {
+        margin-left: 20vw;
+    }
+}
+@media (max-width: 600px)  {
+    .city-name {
+        font-size: 46px;
+        line-height: 48px;
+        width: 80%;
+    }
+    
+    .next-days-forecast {
+        font-size: 22px;
+    }
+    #extra-weather-params, #feels-like, #wind, #humidity, #overcast, #longtitute, #langtitute {
+        font-size: 22px;
+        margin-bottom: 4px;
+    }
+    .temperature {
+        font-size: 150px;
+        grid-area: first;
+    }
+    .overcast-name {
+        font-size: 24px;
+    }
+
+    #current-weather-picture {
+        width: 160px;
+    }
+    
+    .overcast-day {
+        font-size: 28px;
+    }
+    .block {
+        margin-right: 46px;
+     }
+     .overcast-pic {
+         margin-left: 8vw;
+     }
+     .micro-icon-block {
+        margin-top: 40px;
+    }
+}
+@media (max-width: 460px)  {
+    .city-name {
+        font-size: 36px;
+        line-height: 38px;
+        width: 75%;
+    }
+    
+    .next-days-forecast {
+        font-size: 16px;
+    }
+    #extra-weather-params, #feels-like, #wind, #humidity, #overcast, #longtitute, #langtitute {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+    .temperature {
+        font-size: 65px;
+        grid-area: first;
+    }
+    .overcast-name {
+        font-size: 18px;
+    }
+    
+    .overcast-day {
+        font-size: 18px;
+    }
+    .block {
+        margin-right: 20px;
+        margin-bottom: 10px;
+     }
+     .overcast-pic {
+        margin-left: 4vw;
+        width: 69px;
+        margin-top: -69px;
+        }
+     #current-weather-picture {
+        width: 120px;
+    }
+    .form-control {
+        width: 40vw;
+    }
+    .header {
+        flex-direction: column;
+    }
+    .left-page-part {
+        width: unset;
+        justify-content: unset;
+    }
+    .micro-icon-block {
+        margin-top: 40px;
+    }
+}
+
