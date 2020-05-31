@@ -27,7 +27,7 @@ let threeDaysAfter = 0;
 let requests = 0;
 let valueForTime = '';
 
-LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
+
 
 if (localStorage.getItem('checked') === 'true') {
   CHECKBOX.checked = true;
