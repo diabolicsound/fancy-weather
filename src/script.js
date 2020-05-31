@@ -9,17 +9,17 @@ import {
   thirdDayAfterName, PANELDATE, CELCIUM, FARENGATE, SPEAKER, SPEAKERICON,
   CITYNAME, SEARCHFIELD, LONGTITUTE, LATITUTE, months, days, SEARCHBUTTON,
 } from './const';
-import { celciumTempCalculator, farengateTempCalculator } from '../src/temperature/temperature';
-import { weatherConditionAudio, loop, extraWeatherInformation } from './weatherCondition/weatherCondition';
+import { celciumTempCalculator, farengateTempCalculator } from './temperature';
+import { weatherConditionAudio, loop, extraWeatherInformation } from './weatherCondition';
 import {
   textTranslate, getSearchWeather, getWeather, backgroundPicture,
   countryName, countryNameSearch,
-} from './urlRequests/urlRequests';
+} from './urlRequests';
 import {
   cityNamelangChanger, feelsLikeTranslate, latitudeTranslate, daysOfTheWeekLangChanger,
-  timeTranslate,
-} from './translation/translation';
-import { latitudeSearchPositionBuilder, latitudePositionBuilder } from './coordinates/coordinates';
+  timeTranslate, placeholderTranslate
+} from './translation';
+import { latitudeSearchPositionBuilder, latitudePositionBuilder } from './coordinates';
 
 let oneDayAfter = 0;
 let twoDaysAfter = 0;
@@ -239,6 +239,7 @@ ENGLISHLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'en');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'en');
   await timeTranslate(localStorage.getItem('lang'), 'en');
+  await placeholderTranslate(localStorage.getItem('lang'), 'en')
   localStorage.setItem('lang', 'en');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
@@ -250,6 +251,7 @@ RUSSIANLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'ru');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'ru');
   await timeTranslate(localStorage.getItem('lang'), 'ru');
+  await placeholderTranslate(localStorage.getItem('lang'), 'ru')
   localStorage.setItem('lang', 'ru');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
@@ -261,6 +263,7 @@ BELARUSSIANLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'be');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'be');
   await timeTranslate(localStorage.getItem('lang'), 'be');
+  await placeholderTranslate(localStorage.getItem('lang'), 'be')
   localStorage.setItem('lang', 'be');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
