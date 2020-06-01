@@ -126,6 +126,7 @@ function loadingFinished() {
 }
 
 async function pageBuild() {
+  document.getElementById('right-side').classList.add('hidden');
   loading()
   const futureWeather = await getWeather();
   if (!futureWeather.message && (await countryName()).results.length > 0) {
@@ -145,6 +146,7 @@ async function pageBuild() {
     SEARCHFIELD.value = `${futureWeather.message}. Try again`;
   }
   loadingFinished();
+  document.getElementById('right-side').classList.remove('hidden');
 }
 
 
