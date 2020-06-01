@@ -89,7 +89,7 @@ async function dateViewerSearch() {
   const modString = localDateString.slice(0, 25).replace(localDateString.substr(3, 4), ` ${date.getDate()}`);
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
   const finalString = preFinalString.replace(preFinalString.substr(5, 5), months[date.getMonth()]);
-  PANELDATE.textContent = `${finalString.slice(11)}`;
+  PANELDATE.textContent = `${finalString.slice(12)}`;
 }
 
 async function monthsViewer() {
