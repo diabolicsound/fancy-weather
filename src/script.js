@@ -240,7 +240,6 @@ ENGLISHLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'en');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'en');
   await timeTranslate(localStorage.getItem('lang'), 'en');
-  await placeholderTranslate(localStorage.getItem('lang'), 'en')
   localStorage.setItem('lang', 'en');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
@@ -252,7 +251,6 @@ RUSSIANLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'ru');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'ru');
   await timeTranslate(localStorage.getItem('lang'), 'ru');
-  await placeholderTranslate(localStorage.getItem('lang'), 'ru')
   localStorage.setItem('lang', 'ru');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
@@ -264,7 +262,6 @@ BELARUSSIANLANG.addEventListener('click', async () => {
   await latitudeTranslate(LONGTITUTE, localStorage.getItem('lang'), 'be');
   await daysOfTheWeekLangChanger(localStorage.getItem('lang'), 'be');
   await timeTranslate(localStorage.getItem('lang'), 'be');
-  await placeholderTranslate(localStorage.getItem('lang'), 'be')
   localStorage.setItem('lang', 'be');
   LANGBUTTON.textContent = localStorage.getItem('lang').toUpperCase();
   await feelsLikeTranslate((await getWeather()).list[0].main.feels_like);
