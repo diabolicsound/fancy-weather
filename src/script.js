@@ -88,7 +88,7 @@ async function dateViewerSearch() {
   - ((userTimezone.city.timezone * 1000) - (locationTimezone.city.timezone * 1000))));
   const modString = localDateString.slice(0, 25).replace(localDateString.substr(3, 4), ` ${date.getDate()}`);
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
-  const finalString = preFinalString.replace(preFinalString.substr(8, 4), months[date.getMonth()]);
+  const finalString = preFinalString.replace(preFinalString.substr(5, 5), months[date.getMonth()]);
   PANELDATE.textContent = `${finalString.slice(11)}`;
 }
 
@@ -106,8 +106,8 @@ async function monthsViewer() {
   - ((userTimezone.city.timezone * 1000) - (locationTimezone.city.timezone * 1000))));
   const modString = localDateString.slice(0, 25).replace(localDateString.substr(3, 4), ` ${date.getDate()}`);
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
-  const finalString = preFinalString.replace(preFinalString.substr(8, 4), months[date.getMonth()]);
-  document.getElementById('month').textContent = finalString.slice(0, 12);
+  const finalString = preFinalString.replace(preFinalString.substr(7, 9), months[date.getMonth()]);
+  document.getElementById('month').textContent = finalString.slice(0, 11);
   await timeTranslate('en', localStorage.getItem('lang'));
 }
 
