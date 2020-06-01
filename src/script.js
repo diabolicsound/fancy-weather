@@ -152,6 +152,7 @@ async function pageBuildSearch() {
   loading()
   const futureWeather = await getSearchWeather(SEARCHFIELD.value);
   if (!futureWeather.message && (await countryNameSearch(SEARCHFIELD.value)).results.length > 0) {
+    valueForTime = SEARCHFIELD.value;
     const placeType = (await countryNameSearch(SEARCHFIELD.value)).results[0].components._type;
     const cityNameTranslate = (await countryNameSearch(SEARCHFIELD.value)).results[0].components[`${placeType}`];
     const countryNameTranslate = (await
@@ -226,8 +227,8 @@ FARENGATE.addEventListener('click', () => {
 SEARCHBUTTON.addEventListener('click', (event) => {
   event.preventDefault();
   pageBuildSearch();
-  valueForTime = SEARCHFIELD.value;
   requests += 1;
+  valueForTime = 'Minsk';
 });
 
 SPEAKERICON.addEventListener('click', async () => {
