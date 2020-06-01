@@ -108,7 +108,6 @@ async function monthsViewer() {
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
   const finalString = preFinalString.replace(preFinalString.substr(7, 9), months[date.getMonth()]);
   document.getElementById('month').textContent = finalString.slice(0, 11);
-  console.log(document.getElementById('month'))
   await timeTranslate('en', localStorage.getItem('lang'));
 }
 
