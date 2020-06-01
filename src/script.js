@@ -89,7 +89,7 @@ async function dateViewerSearch() {
   const modString = localDateString.slice(0, 25).replace(localDateString.substr(3, 4), ` ${date.getDate()}`);
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
   const finalString = preFinalString.replace(preFinalString.substr(5, 5), months[date.getMonth()]);
-  PANELDATE.textContent = `${finalString.slice(12)}`;
+  PANELDATE.textContent = `${finalString.slice(11)}`;
 }
 
 async function monthsViewer() {
@@ -107,7 +107,7 @@ async function monthsViewer() {
   const modString = localDateString.slice(0, 25).replace(localDateString.substr(3, 4), ` ${date.getDate()}`);
   const preFinalString = (modString.replace(modString.substr(4, 2), ''));
   const finalString = preFinalString.replace(preFinalString.substr(7, 9), months[date.getMonth()]);
-  document.getElementById('month').textContent = finalString.slice(0, 11);
+  document.getElementById('month').textContent = `${finalString.slice(0, 11)} `;
   await timeTranslate('en', localStorage.getItem('lang'));
 }
 
