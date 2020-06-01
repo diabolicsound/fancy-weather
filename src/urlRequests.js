@@ -96,18 +96,18 @@ async function backgroundPicture() {
   const daytime = '';
   const date = new Date();
   if (date.getMonth() > 1 && date.getMonth() < 5) {
-    (LATITUTE.textContent).slice(10, 12) > 0 ? [season] = seasons[1] : [season] = seasons[3];
+    (LATITUTE.textContent).slice(10, 12) > 0 ? season = seasons[1] : [season] = seasons[3];
   }
   if (date.getMonth() > 4 && date.getMonth() < 8) {
-    (LATITUTE.textContent).slice(10, 12) > 0 ? [season] = seasons[2] : [season] = seasons[0];
+    (LATITUTE.textContent).slice(10, 12) > 0 ? season = seasons[2] : [season] = seasons[0];
   }
   if (date.getMonth() > 7 && date.getMonth() < 11) {
-    (LATITUTE.textContent).slice(10, 12) > 0 ? [season] = seasons[3] : [season] = seasons[1];
+    (LATITUTE.textContent).slice(10, 12) > 0 ? season = seasons[3] : [season] = seasons[1];
   }
   if (date.getMonth() > 10 || date.getMonth() === 0 || date.getMonth() === 1) {
-    (LATITUTE.textContent).slice(10, 12) > 0 ? [season] = seasons[0] : [season] = seasons[2];
+    (LATITUTE.textContent).slice(10, 12) > 0 ? season = seasons[0] : [season] = seasons[2];
   }
-  const url = `https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=nature,${season[0]},${daytime}&client_id=e2077ad31a806c894c460aec8f81bc2af4d09c4f8104ae3177bb809faf0eac17`;
+  const url = `https://api.unsplash.com/photos/random?orientation=landscape&per_page=1&query=nature,${season},${daytime}&client_id=e2077ad31a806c894c460aec8f81bc2af4d09c4f8104ae3177bb809faf0eac17`;
   try {
     const result = await fetch(url);
     const data = await result.json();
