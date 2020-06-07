@@ -27,7 +27,7 @@ async function getUserLocation() {
 
 async function countryNameSearch(value) {
   try {
-    const url = `https://api.opencagedata.com/geocode/v1/json?q=${value}&key=32553e4b5fbe4a1582e5a2767962ef89&pretty=1&no_annotations=1`;
+    const url = `https://api.opencagedata.com/geocode/v1/json?q=${value}&key=f1b03a8bc6034a2b83e965241284bcf9&pretty=1&no_annotations=1`;
     const result = await fetch(url);
     const data = await result.json();
     return data;
@@ -52,12 +52,12 @@ async function countryName() {
   const city = await getWeather();
   if (!city.message) {
     try {
-      const url = `https://api.opencagedata.com/geocode/v1/json?q=${city.city.name}&key=32553e4b5fbe4a1582e5a2767962ef89&pretty=1&no_annotations=1`;
+      const url = `https://api.opencagedata.com/geocode/v1/json?q=${city.city.name}&key=f1b03a8bc6034a2b83e965241284bcf9&pretty=1&no_annotations=1`;
       const result = await fetch(url);
       const data = await result.json();
       return data;
     } catch (err) {
-      const url = 'https://api.opencagedata.com/geocode/v1/json?q=minsk&key=32553e4b5fbe4a1582e5a2767962ef89&pretty=1&no_annotations=1';
+      const url = 'https://api.opencagedata.com/geocode/v1/json?q=minsk&key=f1b03a8bc6034a2b83e965241284bcf9&pretty=1&no_annotations=1';
       const result = await fetch(url);
       const data = await result.json();
       return data;
