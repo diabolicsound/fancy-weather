@@ -39,7 +39,7 @@ async function countryNameSearch(value) {
 async function getWeather() {
   const location = await getUserLocation();
   try {
-    const url = `https://api.openweathermap.org/data/2.5/forecast?q=${location.city}&lang=en&units=metric&APPID=cb58f3ad42b12935cec3ca31a36228e4`;
+    const url = `https://api.openweathermap.org/data/2.5/forecast?q=Minsk&lang=en&units=metric&APPID=cb58f3ad42b12935cec3ca31a36228e4`;
     const result = await fetch(url);
     const data = await result.json();
     return data;
